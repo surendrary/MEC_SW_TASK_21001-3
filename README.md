@@ -2,7 +2,7 @@
 
 # MEC_SW_TASK_21001-3
 This is simple web application based on Node.js as backend, MongoDb as NoSQL database.
-# Step to Run:
+# Steps to Run:
 1) Clone the repository on local using : git clone https://github.com/surendrary/MEC_SW_TASK_21001-3.
 2) Install MongoDb Server and keep it running on port : 27017.
 3) Install Node.js on local.(Nodeclipse pluging on eclipse IDE).
