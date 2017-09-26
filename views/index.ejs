@@ -1,0 +1,46 @@
+<html>
+<head>
+<title><%= title %></title>
+<link href="stylesheets/style.css" rel="stylesheet"/>
+<link href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script> 
+<script type="text/javascript" src="./js/jquery.tablesorter.js"></script>
+<script type="text/javascript" src="http://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script type = "text/javascript">
+$(document).ready(function() {
+    $('#requests').dataTable( {
+        "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "100"]],
+        "searching": true
+     } );
+});
+</script>
+  </head>
+  <body>
+  <h1> Request Table </h1>
+  <form action="/request/new" method="get">
+  	<input type="submit" value="Add">
+  	<br>
+  	<table id ="requests" class="display">
+    <thead>
+    <tr>
+    <th><span>Req ID</span></th>
+    <th><span>Name</span></th>
+    <th><span>Email</span></th>
+    <th><span>Age</span></th>
+    <th><span>Gender</span></th>
+    <th><span>Request Time</span></th>
+    <th><span>Status</span></th>
+    <th><span>Action</span></th>	
+  	</tr>
+    </thead>
+    <tbody>
+    <% for(var i in requests) 
+	  {   
+	   %>                  
+  			<tr><th><%=requests[i].requestid%></th> <th><%=requests[i].name%></th> <th><%=requests[i].email%></th> <th><%=requests[i].age%></th> <th><%=requests[i].gender%></th> <th><%=new Date(requests[i].req_utctime)%></th> <th><%=requests[i].status%></th> <th>Edit</th></tr>
+ 	<% } %>
+  </form>
+  </tbody>
+  </table>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<html>
+<head> 	
+<style>
+
+input[type=text], select{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+div {
+    border-radius: 10px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+h1{
+	margin-left: 800px;
+
+}
+</style> 	
+</head>
+ 	<body>
+ 	<br></br>	
+ 	<h1> New Request</h1>
+ 	 	<div>
+		<form action="/request/new" method="post">
+		  <label for="requestid">REQUEST ID :</label>
+		  <input type="text" name="requestid"><br></br>
+		  <label for="name">NAME :</label>
+		  <input type="text" name="name"><br></br>
+		  <label for="email">EMAIL :</label>
+		  <input type="text" name="email"><br></br>
+		  <label for="age">AGE :</label>
+		  <input type="text" name="age"><br></br>
+		  <label for="gender">GENDER :</label>
+		  <select name="gender">
+		    <option value="M">Male</option>
+		    <option value="F">Female</option>
+		  </select><br></br> 
+		  <input type="submit" value="Save">
+		</form> 
+	</div>
+	</body>
+</html>
